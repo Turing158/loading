@@ -1,0 +1,95 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.load{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+}
+@-webkit-keyframes flip-to-square-random {
+    0% {
+      -webkit-transform: rotateX(-90deg);
+              transform: rotateX(-90deg); }
+    50%,
+    75% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0); }
+    100% {
+      opacity: 0;
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0); } }
+  @keyframes flip-to-square-random {
+    0% {
+      -webkit-transform: rotateX(-90deg);
+              transform: rotateX(-90deg); }
+    50%,
+    75% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0); }
+    100% {
+      opacity: 0;
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0); } }
+  
+  .flip-to-square-random {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 128px;
+    width: 128px; 
+    /* background-image: url(grass.png); */
+}
+    .flip-to-square-random div {
+
+      -webkit-animation: flip-to-square-random 1.5s calc(var(--delay) * 1s) infinite backwards;
+              animation: flip-to-square-random 1.5s calc(var(--delay) * 1s) infinite backwards;
+        width: 42.6px;
+        height: 42.6px;
+        background-image: url(grass.png);
+        background-size: 300%;
+        background-repeat:no-repeat;
+ }
+      .flip-to-square-random div:nth-child(1) {
+        --delay: 0.1;
+        background-position: 0 0;
+        }
+      .flip-to-square-random div:nth-child(2) {
+        --delay: 0.02;
+        background-position: -42.66px 0;
+        }
+      .flip-to-square-random div:nth-child(3) {
+        --delay: 0.12; 
+        background-position: -85.33px 0;
+        }
+      .flip-to-square-random div:nth-child(4) {
+        --delay: 0.04;
+        background-position: 0 -42.66px;
+        }
+      .flip-to-square-random div:nth-child(5) {
+        --delay: 0.02;
+        background-position: -42.66px -42.66px;
+        }
+      .flip-to-square-random div:nth-child(6) {
+        --delay: 0.12; 
+        background-position: -85.33px -42.66px;
+        }
+      .flip-to-square-random div:nth-child(7) {
+        --delay: 0.18; 
+        background-position: 0 -85.33px;
+    }
+      .flip-to-square-random div:nth-child(8) {
+        --delay: 0.16; 
+        background-position: -42.66px -85.33px;
+    }
+      .flip-to-square-random div:nth-child(9) {
+        --delay: 0.14;
+        background-position: -85.33px -85.33px;
+    }
